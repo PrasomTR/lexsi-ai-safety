@@ -1,0 +1,103 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# C extensions & distribution builds
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+.ruff_cache/
+.mypy_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# IDE & OS Specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Secrets, Environment & Tokens
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+token.txt
+hf_token.txt
+.huggingface/
+
+# Hugging Face Cache & Model Binaries
+.cache/
+hf_cache/
+cache/
+huggingface/
+checkpoints/
+models/
+
+# Large Model Weights (General)
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.gguf
+*.onnx
+
+# Allow tracking adapter configs and lightweight LoRA weights
+*.safetensors
+!artifacts/adapter_checkpoint/*.safetensors
+
+# Experiment Tracking & Logs
+wandb/
+.wandb/
+lightning_logs/
+runs/
+tensorboard/
+mlruns/
+*.log
+
+# Agent Scratch & Temporary Directories
+.agents/
+tmp/
+temp/

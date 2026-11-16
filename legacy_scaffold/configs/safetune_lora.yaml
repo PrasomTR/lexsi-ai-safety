@@ -1,0 +1,46 @@
+# ==============================================================================
+# Train-Time Safety Hardening Configuration (SafeTune QLoRA)
+# ==============================================================================
+
+model_id: "CohereLabs/tiny-aya-global"
+fallback_model_id: "DhruvParmar051/tiny-aya-global-oneshot-repair"
+algo: "safegrad"
+
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+target_modules:
+  - "q_proj"
+  - "k_proj"
+  - "v_proj"
+  - "o_proj"
+  - "gate_proj"
+  - "up_proj"
+  - "down_proj"
+
+quantization:
+  load_in_4bit: true
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_compute_dtype: "bfloat16"
+  bnb_4bit_use_double_quant: true
+
+data:
+  train_dataset_path: "data/safety_train_pairs.jsonl"
+  max_seq_length: 1024
+
+training_args:
+  output_dir: "artifacts/adapter_checkpoint"
+  num_train_epochs: 3
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 8
+  learning_rate: 0.0002
+  lr_scheduler_type: "cosine"
+  warmup_ratio: 0.05
+  weight_decay: 0.01
+  fp16: false
+  bf16: true
+  gradient_checkpointing: true
+  logging_steps: 10
+  save_strategy: "epoch"
+  save_total_limit: 1
+  seed: 42

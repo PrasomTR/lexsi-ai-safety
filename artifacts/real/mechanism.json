@@ -1,0 +1,207 @@
+{
+  "model_id": "CohereLabs/tiny-aya-global",
+  "hidden_size": 896,
+  "num_layers": 24,
+  "steering_layer": 23,
+  "layer_sweep": [
+    {
+      "layer": 0,
+      "f1": 0.5714,
+      "precision": 0.6957,
+      "recall": 0.4848,
+      "separation": 0.4878
+    },
+    {
+      "layer": 1,
+      "f1": 0.4615,
+      "precision": 0.6316,
+      "recall": 0.3636,
+      "separation": 0.6558
+    },
+    {
+      "layer": 2,
+      "f1": 0.5185,
+      "precision": 0.6667,
+      "recall": 0.4242,
+      "separation": 0.7649
+    },
+    {
+      "layer": 3,
+      "f1": 0.5246,
+      "precision": 0.5714,
+      "recall": 0.4848,
+      "separation": 0.8951
+    },
+    {
+      "layer": 4,
+      "f1": 0.6364,
+      "precision": 0.6364,
+      "recall": 0.6364,
+      "separation": 1.0916
+    },
+    {
+      "layer": 5,
+      "f1": 0.6667,
+      "precision": 0.7407,
+      "recall": 0.6061,
+      "separation": 1.1866
+    },
+    {
+      "layer": 6,
+      "f1": 0.6765,
+      "precision": 0.6571,
+      "recall": 0.697,
+      "separation": 1.3018
+    },
+    {
+      "layer": 7,
+      "f1": 0.6667,
+      "precision": 0.6389,
+      "recall": 0.697,
+      "separation": 1.3477
+    },
+    {
+      "layer": 8,
+      "f1": 0.7042,
+      "precision": 0.6579,
+      "recall": 0.7576,
+      "separation": 1.5207
+    },
+    {
+      "layer": 9,
+      "f1": 0.7059,
+      "precision": 0.6857,
+      "recall": 0.7273,
+      "separation": 1.6174
+    },
+    {
+      "layer": 10,
+      "f1": 0.6765,
+      "precision": 0.6571,
+      "recall": 0.697,
+      "separation": 1.8635
+    },
+    {
+      "layer": 11,
+      "f1": 0.6567,
+      "precision": 0.6471,
+      "recall": 0.6667,
+      "separation": 1.9496
+    },
+    {
+      "layer": 12,
+      "f1": 0.6462,
+      "precision": 0.6562,
+      "recall": 0.6364,
+      "separation": 2.2156
+    },
+    {
+      "layer": 13,
+      "f1": 0.625,
+      "precision": 0.6452,
+      "recall": 0.6061,
+      "separation": 2.437
+    },
+    {
+      "layer": 14,
+      "f1": 0.7143,
+      "precision": 0.6757,
+      "recall": 0.7576,
+      "separation": 2.2227
+    },
+    {
+      "layer": 15,
+      "f1": 0.7246,
+      "precision": 0.6944,
+      "recall": 0.7576,
+      "separation": 2.3306
+    },
+    {
+      "layer": 16,
+      "f1": 0.7246,
+      "precision": 0.6944,
+      "recall": 0.7576,
+      "separation": 2.5817
+    },
+    {
+      "layer": 17,
+      "f1": 0.7077,
+      "precision": 0.7188,
+      "recall": 0.697,
+      "separation": 3.48
+    },
+    {
+      "layer": 18,
+      "f1": 0.7077,
+      "precision": 0.7188,
+      "recall": 0.697,
+      "separation": 4.0641
+    },
+    {
+      "layer": 19,
+      "f1": 0.7761,
+      "precision": 0.7647,
+      "recall": 0.7879,
+      "separation": 4.9869
+    },
+    {
+      "layer": 20,
+      "f1": 0.7458,
+      "precision": 0.8462,
+      "recall": 0.6667,
+      "separation": 7.008
+    },
+    {
+      "layer": 21,
+      "f1": 0.7619,
+      "precision": 0.8,
+      "recall": 0.7273,
+      "separation": 8.8681
+    },
+    {
+      "layer": 22,
+      "f1": 0.7213,
+      "precision": 0.7857,
+      "recall": 0.6667,
+      "separation": 10.8822
+    },
+    {
+      "layer": 23,
+      "f1": 0.7869,
+      "precision": 0.8571,
+      "recall": 0.7273,
+      "separation": 72.8133
+    }
+  ],
+  "direction_alignment_vs_en": {
+    "ar": 0.3392,
+    "de": 0.5805,
+    "en": 1.0,
+    "es": 0.6379,
+    "fr": 0.6439,
+    "hi": 0.5017,
+    "ru": 0.6505,
+    "zh": 0.6145
+  },
+  "refusal_vector_norm": 292.880554,
+  "refusal_direction_unit_norm": 1.0,
+  "residual_norm_at_layer": 292.8805,
+  "probe_transfer": {
+    "train": {
+      "n": 35,
+      "accuracy": 1.0
+    },
+    "transfer_accuracy_by_language": {
+      "ar": 0.5556,
+      "de": 0.8571,
+      "en": 1.0,
+      "es": 0.75,
+      "fr": 0.8571,
+      "hi": 0.6667,
+      "ru": 0.4,
+      "zh": 0.7778
+    },
+    "mean_transfer_accuracy": 0.733
+  },
+  "contrast_prompts_used": 66
+}

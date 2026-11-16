@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lexsi-ai-safety"
+version = "1.0.0"
+description = "Lexsi AI Safety Hackathon (Track 2: AI Red Teaming, Safety and Alignment) - measured, falsifiable safety pipeline"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "Lexsi AI Safety Team" }
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "torch>=2.2",
+    "transformers>=4.40",
+    "numpy>=1.26",
+    "safetensors>=0.4",
+    "matplotlib>=3.8",
+    "pytest>=8.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.3.0"]
+gpu = ["torch>=2.7", "transformers>=5.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

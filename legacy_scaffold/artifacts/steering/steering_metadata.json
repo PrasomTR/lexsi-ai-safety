@@ -1,0 +1,21 @@
+{
+  "model_id": "CohereLabs/tiny-aya-global",
+  "method": "activation_difference",
+  "toolkit": "safetune-0.1.0",
+  "representative_layer": 20,
+  "target_layers": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "alpha": 0.35,
+  "hidden_dimension": 2048,
+  "vector_norm": 1.0,
+  "hook_point": "residual_post"
+}

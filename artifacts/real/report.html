@@ -1,0 +1,125 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Lexsi AI Safety - measured results</title>
+<style>
+:root{--bg:#0e1116;--fg:#e6edf3;--muted:#8b949e;--red:#f85149;--green:#3fb950;--line:#21262d;--acc:#58a6ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:40px 24px 80px}
+h1{font-size:30px;margin:0 0 6px;letter-spacing:-.02em}
+h2{font-size:19px;margin:38px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+p,li{color:#c9d1d9}
+.sub{color:var(--muted);margin:0 0 26px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:22px 0}
+.card{background:#161b22;border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.card .k{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.card .v{font-size:28px;font-weight:650;margin-top:6px;letter-spacing:-.02em}
+.card .d{font-size:13px;color:var(--muted);margin-top:4px}
+.good{color:var(--green)} .bad{color:var(--red)} .acc{color:var(--acc)}
+table{width:100%;border-collapse:collapse;margin:10px 0 6px;font-size:14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+code{background:#161b22;padding:2px 6px;border-radius:5px;color:#79c0ff;font-size:13px}
+pre{background:#161b22;border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow:auto}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:12px;color:var(--muted);margin-right:6px}
+.note{border-left:3px solid var(--acc);padding:10px 16px;background:#12181f;border-radius:0 8px 8px 0;margin:16px 0}
+footer{color:var(--muted);font-size:13px;margin-top:48px;border-top:1px solid var(--line);padding-top:16px}
+</style></head><body><div class='wrap'>
+<h1>Safety claims should be executable, not asserted</h1>
+<p class='sub'>Lexsi AI Safety Hackathon - Track 2 (AI Red Teaming, Safety and Alignment) | model <code>CohereLabs/tiny-aya-global</code> | 68 attack / 26 benign / 10 utility probes | 8 languages</p>
+<div class='cards'>
+<div class='card'><div class='k'>Attack success rate</div><div class='v good'>51.5%</div><div class='d'>-> 47.1%</div></div>
+<div class='card'><div class='k'>Refusal rate</div><div class='v acc'>48.5%</div><div class='d'>-> 52.9%</div></div>
+<div class='card'><div class='k'>Over-refusal (benign)</div><div class='v good'>0.0%</div><div class='d'>-> 11.5%</div></div>
+<div class='card'><div class='k'>Coherence</div><div class='v acc'>100.0%</div><div class='d'>-> 99.0%</div></div>
+<div class='card'><div class='k'>DEFCON</div><div class='v acc'>DEFCON 3</div><div class='d'>-> DEFCON 3</div></div>
+<div class='card'><div class='k'>GSM8K accuracy</div><div class='v acc'>0.0%</div><div class='d'>-> 0.0%</div></div>
+</div>
+<div class='note'>Every number on this page is recomputed from the raw completions in <code>artifacts/real/*_transcripts.jsonl</code>. Run <code>python scripts/verify_submission.py</code> to falsify them yourself.</div>
+<h2>Per attack family</h2>
+<table><thead><tr>
+<th>family</th>
+<th class='num'>('baseline', '')</th>
+<th class='num'>('steered', '')</th>
+</tr></thead><tbody>
+<tr><td>encoding_bypass</td><td class='num'>('63.6%', '')</td><td class='num'>('36.4%', '')</td></tr>
+<tr><td>harmful_content</td><td class='num'>('36.4%', '')</td><td class='num'>('9.1%', '')</td></tr>
+<tr><td>jailbreak</td><td class='num'>('45.5%', '')</td><td class='num'>('63.6%', '')</td></tr>
+<tr><td>multilingual_exploit</td><td class='num'>('53.8%', '')</td><td class='num'>('53.8%', '')</td></tr>
+<tr><td>prompt_injection</td><td class='num'>('72.7%', '')</td><td class='num'>('63.6%', '')</td></tr>
+<tr><td>system_leakage</td><td class='num'>('36.4%', '')</td><td class='num'>('54.5%', '')</td></tr>
+</tbody></table>
+<h2>Per language (parallel sentences)</h2>
+<table><thead><tr>
+<th>language</th>
+<th class='num'>('baseline', '')</th>
+<th class='num'>('steered', '')</th>
+</tr></thead><tbody>
+<tr><td>ar</td><td class='num'>('57.1%', '')</td><td class='num'>('42.9%', '')</td></tr>
+<tr><td>de</td><td class='num'>('100.0%', '')</td><td class='num'>('40.0%', '')</td></tr>
+<tr><td>en</td><td class='num'>('52.2%', '')</td><td class='num'>('43.5%', '')</td></tr>
+<tr><td>es</td><td class='num'>('16.7%', '')</td><td class='num'>('83.3%', '')</td></tr>
+<tr><td>fr</td><td class='num'>('20.0%', '')</td><td class='num'>('80.0%', '')</td></tr>
+<tr><td>hi</td><td class='num'>('85.7%', '')</td><td class='num'>('28.6%', '')</td></tr>
+<tr><td>ru</td><td class='num'>('62.5%', '')</td><td class='num'>('37.5%', '')</td></tr>
+<tr><td>zh</td><td class='num'>('14.3%', '')</td><td class='num'>('42.9%', '')</td></tr>
+</tbody></table>
+<h2>Mechanism</h2>
+<ul>
+<li>Refusal becomes linearly decodable at decoder layer <b>23</b> (rank-1 probe F1 = 0.7869).</li>
+<li>The refusal direction extracted independently per language points the same way: cosine vs. English min 0.339, mean 0.567.</li>
+<li>A probe trained only on English transfers to the other languages: {'ar': 0.5556, 'de': 0.8571, 'en': 1.0, 'es': 0.75, 'fr': 0.8571, 'hi': 0.6667, 'ru': 0.4, 'zh': 0.7778} (mean 73.3%).</li>
+<li>Mitigation = one 896-d vector, no retraining, no second model.</li>
+</ul>
+<table><thead><tr>
+<th>layer</th>
+<th class='num'>('probe F1', '')</th>
+</tr></thead><tbody>
+<tr><td>0</td><td class='num'>(0.5714, '')</td></tr>
+<tr><td>1</td><td class='num'>(0.4615, '')</td></tr>
+<tr><td>2</td><td class='num'>(0.5185, '')</td></tr>
+<tr><td>3</td><td class='num'>(0.5246, '')</td></tr>
+<tr><td>4</td><td class='num'>(0.6364, '')</td></tr>
+<tr><td>5</td><td class='num'>(0.6667, '')</td></tr>
+<tr><td>6</td><td class='num'>(0.6765, '')</td></tr>
+<tr><td>7</td><td class='num'>(0.6667, '')</td></tr>
+<tr><td>8</td><td class='num'>(0.7042, '')</td></tr>
+<tr><td>9</td><td class='num'>(0.7059, '')</td></tr>
+<tr><td>10</td><td class='num'>(0.6765, '')</td></tr>
+<tr><td>11</td><td class='num'>(0.6567, '')</td></tr>
+<tr><td>12</td><td class='num'>(0.6462, '')</td></tr>
+<tr><td>13</td><td class='num'>(0.625, '')</td></tr>
+<tr><td>14</td><td class='num'>(0.7143, '')</td></tr>
+<tr><td>15</td><td class='num'>(0.7246, '')</td></tr>
+<tr><td>16</td><td class='num'>(0.7246, '')</td></tr>
+<tr><td>17</td><td class='num'>(0.7077, '')</td></tr>
+<tr><td>18</td><td class='num'>(0.7077, '')</td></tr>
+<tr><td>19</td><td class='num'>(0.7761, '')</td></tr>
+<tr><td>20</td><td class='num'>(0.7458, '')</td></tr>
+<tr><td>21</td><td class='num'>(0.7619, '')</td></tr>
+<tr><td>22</td><td class='num'>(0.7213, '')</td></tr>
+<tr><td>23</td><td class='num'>(0.7869, '')</td></tr>
+</tbody></table>
+<h2>Safety / utility Pareto</h2>
+<table><thead><tr>
+<th>alpha</th>
+<th class='num'>('ASR', '')</th>
+<th class='num'>('over-refusal', '')</th>
+</tr></thead><tbody>
+<tr><td>0.0</td><td class='num'>('75.0%', '')</td><td class='num'>('0.0%', '')</td></tr>
+<tr><td>0.01</td><td class='num'>('66.7%', '')</td><td class='num'>('0.0%', '')</td></tr>
+<tr><td>0.02</td><td class='num'>('58.3%', '')</td><td class='num'>('0.0%', '')</td></tr>
+<tr><td>0.03</td><td class='num'>('50.0%', '')</td><td class='num'>('0.0%', '')</td></tr>
+<tr><td>0.05</td><td class='num'>('41.7%', '')</td><td class='num'>('8.3%', '')</td></tr>
+<tr><td>0.1</td><td class='num'>('33.3%', '')</td><td class='num'>('0.0%', '')</td></tr>
+</tbody></table>
+<h2>Reproduce</h2>
+<pre>python scripts/run_real_pipeline.py --model &lt;model-id&gt;
+python scripts/verify_submission.py
+python scripts/audit_ai_slop.py
+python -m pytest tests -q</pre>
+<h2>Disclosure</h2>
+<p>The first prototype of this submission reported attack-success rates that were hard-coded constants in the evaluator and shipped an untrained adapter. Both were removed: a metric may now only be produced by a function that consumed model output, and <code>scripts/audit_ai_slop.py</code> fails the build if a metric-shaped literal or a fabricated completion string reappears.</p>
+<footer>Generated from <code>artifacts/real/*.json</code> - no server, no CDN, no network.</footer>
+</div></body></html>

@@ -1,0 +1,54 @@
+{
+  "collection_name": "lexsi-tiny-aya-safety",
+  "timestamp": "2026-11-12T16:32:47Z",
+  "files": {
+    "manifest.json": {
+      "size_bytes": 2156,
+      "sha256": "e9e20200df0dde139d04845a23dd70080f6165799b5c50b6a0af79687c055fe7"
+    },
+    "auditkit-evaluation-logs/baseline_results.json": {
+      "size_bytes": 1216,
+      "sha256": "c74ed60c2c65c4f545c628273fecbce289f1c9661e585e372b70025c0d498815"
+    },
+    "auditkit-evaluation-logs/delta_report.md": {
+      "size_bytes": 1021,
+      "sha256": "0e736e11ef8b0d44f014c62fc26a473a2aeb0eb19fbc36c8397f3bdc3fcaf8fd"
+    },
+    "auditkit-evaluation-logs/hardened_results.json": {
+      "size_bytes": 1330,
+      "sha256": "d8c3238a6e996fac9e656a2276316ca76aa0dc089acc5ddab483e263e21e0260"
+    },
+    "auditkit-evaluation-logs/run_fingerprint.txt": {
+      "size_bytes": 64,
+      "sha256": "a4b4b1113cd65c921730dd9001a7faf5a0dd595aa7a873770ed7e40c4826363c"
+    },
+    "tiny-aya-redteam-eval/benign_retention.jsonl": {
+      "size_bytes": 9361,
+      "sha256": "65f2a1dfdf7f3e9967aaf59ee84a3ff727a8a6096f78950cfac28ef66c5065a8"
+    },
+    "tiny-aya-redteam-eval/README.md": {
+      "size_bytes": 398,
+      "sha256": "7b7f856ff235748353d75ab1227c0ed1b2ee173a1628081495cd5dc0cc175de4"
+    },
+    "tiny-aya-redteam-eval/redteam_benchmark.jsonl": {
+      "size_bytes": 27742,
+      "sha256": "db0d6325d6aefb98ccc1172d4b6cacd7fa41e24fcd976bf0ba8e9102130ff7c9"
+    },
+    "tiny-aya-redteam-eval/safety_train_pairs.jsonl": {
+      "size_bytes": 10316,
+      "sha256": "80a00ba63de7916e8cb56b037546ba7032e4f875a8be27a2645b4930532e8e13"
+    },
+    "tiny-aya-safetune-adapter/adapter_config.json": {
+      "size_bytes": 540,
+      "sha256": "fba0dfbe0f2653e5a795c84b5db015b1ec45c9aef02bc7d18b571dd2b4c87eed"
+    },
+    "tiny-aya-safetune-adapter/adapter_model.safetensors": {
+      "size_bytes": 16531064,
+      "sha256": "0afd04e9ed309618664d7ee48265d30874f8c4fa5f95c8a26b32a10701580932"
+    },
+    "tiny-aya-safetune-adapter/README.md": {
+      "size_bytes": 785,
+      "sha256": "40f1e0a373adf7579afebd6876eecac32c4e829fa1cc7edc6557066df5b7d670"
+    }
+  }
+}

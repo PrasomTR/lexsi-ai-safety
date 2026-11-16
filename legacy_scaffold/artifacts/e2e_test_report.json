@@ -1,0 +1,284 @@
+{
+  "timestamp": "2026-11-12T15:05:38Z",
+  "tier": "all",
+  "exit_code": 0,
+  "passed": true,
+  "summary": {
+    "total": 19,
+    "passed": 19,
+    "failed": 0,
+    "skipped": 0,
+    "errors": 0,
+    "duration_seconds": 11.4374
+  },
+  "tests": [
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair01_f1_f7_model_config_conforms_to_auditkit_loader",
+      "outcome": "passed",
+      "duration": 0.0003,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair02_f1_f9_model_architecture_maps_to_peft_target_modules",
+      "outcome": "passed",
+      "duration": 0.0002,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair03_f2_f3_python_env_matches_repo_layout",
+      "outcome": "passed",
+      "duration": 0.0023,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair04_f2_f14_execution_environment_runs_cli_scripts",
+      "outcome": "passed",
+      "duration": 8.1873,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair05_f3_f14_configs_pass_into_script_cli_args",
+      "outcome": "passed",
+      "duration": 0.0108,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair06_f3_f16_artifact_paths_map_to_hf_repo_structures",
+      "outcome": "passed",
+      "duration": 0.0011,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair07_f4_f6_raw_prompts_scrub_through_curatorkit_into_valid_jsonl",
+      "outcome": "passed",
+      "duration": 0.3151,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair08_f4_f7_benchmark_dataset_feeds_directly_into_auditkit_evaluators",
+      "outcome": "passed",
+      "duration": 0.0002,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair09_f5_f6_xstest_and_gsm8k_scrub_into_valid_benign_datasets",
+      "outcome": "passed",
+      "duration": 0.0107,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair10_f5_f13_benign_prompts_drive_orr_calculation",
+      "outcome": "passed",
+      "duration": 0.0001,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair11_f6_f8_dataset_hashes_integrate_into_sha256_run_fingerprint",
+      "outcome": "passed",
+      "duration": 0.0004,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair12_f7_f8_engine_outputs_generate_valid_baseline_results",
+      "outcome": "passed",
+      "duration": 0.0043,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair13_f8_f12_baseline_results_feed_as_prior_into_ak_compare",
+      "outcome": "passed",
+      "duration": 0.0003,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair14_f9_f10_adapter_checkpoint_combined_with_steering_alpha",
+      "outcome": "passed",
+      "duration": 2.7807,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair15_f9_f12_adapter_checkpoint_feeds_into_auditkit_evaluator",
+      "outcome": "passed",
+      "duration": 0.0086,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair16_f10_f12_steered_inference_hook_feeds_into_differential_audit",
+      "outcome": "passed",
+      "duration": 0.0003,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair17_f12_f13_delta_comparison_contains_orr_and_utility_metrics",
+      "outcome": "passed",
+      "duration": 0.0002,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair18_f14_f16_script_07_packages_outputs_of_scripts_02_06",
+      "outcome": "passed",
+      "duration": 0.0096,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair19_f16_f17_readme_references_exact_hf_collection_names_and_paths",
+      "outcome": "passed",
+      "duration": 0.001,
+      "tier": "tier3",
+      "error_message": null
+    }
+  ],
+  "details": [
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair01_f1_f7_model_config_conforms_to_auditkit_loader",
+      "outcome": "passed",
+      "duration": 0.0003,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair02_f1_f9_model_architecture_maps_to_peft_target_modules",
+      "outcome": "passed",
+      "duration": 0.0002,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair03_f2_f3_python_env_matches_repo_layout",
+      "outcome": "passed",
+      "duration": 0.0023,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair04_f2_f14_execution_environment_runs_cli_scripts",
+      "outcome": "passed",
+      "duration": 8.1873,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair05_f3_f14_configs_pass_into_script_cli_args",
+      "outcome": "passed",
+      "duration": 0.0108,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair06_f3_f16_artifact_paths_map_to_hf_repo_structures",
+      "outcome": "passed",
+      "duration": 0.0011,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair07_f4_f6_raw_prompts_scrub_through_curatorkit_into_valid_jsonl",
+      "outcome": "passed",
+      "duration": 0.3151,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair08_f4_f7_benchmark_dataset_feeds_directly_into_auditkit_evaluators",
+      "outcome": "passed",
+      "duration": 0.0002,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair09_f5_f6_xstest_and_gsm8k_scrub_into_valid_benign_datasets",
+      "outcome": "passed",
+      "duration": 0.0107,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair10_f5_f13_benign_prompts_drive_orr_calculation",
+      "outcome": "passed",
+      "duration": 0.0001,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair11_f6_f8_dataset_hashes_integrate_into_sha256_run_fingerprint",
+      "outcome": "passed",
+      "duration": 0.0004,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair12_f7_f8_engine_outputs_generate_valid_baseline_results",
+      "outcome": "passed",
+      "duration": 0.0043,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair13_f8_f12_baseline_results_feed_as_prior_into_ak_compare",
+      "outcome": "passed",
+      "duration": 0.0003,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair14_f9_f10_adapter_checkpoint_combined_with_steering_alpha",
+      "outcome": "passed",
+      "duration": 2.7807,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair15_f9_f12_adapter_checkpoint_feeds_into_auditkit_evaluator",
+      "outcome": "passed",
+      "duration": 0.0086,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair16_f10_f12_steered_inference_hook_feeds_into_differential_audit",
+      "outcome": "passed",
+      "duration": 0.0003,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair17_f12_f13_delta_comparison_contains_orr_and_utility_metrics",
+      "outcome": "passed",
+      "duration": 0.0002,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair18_f14_f16_script_07_packages_outputs_of_scripts_02_06",
+      "outcome": "passed",
+      "duration": 0.0096,
+      "tier": "tier3",
+      "error_message": null
+    },
+    {
+      "nodeid": "tests/e2e/tier3_combinations/test_t3_pairwise_interactions.py::TestT3PairwiseInteractions::test_pair19_f16_f17_readme_references_exact_hf_collection_names_and_paths",
+      "outcome": "passed",
+      "duration": 0.001,
+      "tier": "tier3",
+      "error_message": null
+    }
+  ]
+}

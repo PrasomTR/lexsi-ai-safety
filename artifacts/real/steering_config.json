@@ -1,0 +1,12 @@
+{
+  "model_id": "CohereLabs/tiny-aya-global",
+  "method": "activation_steering_residual_stream",
+  "steering_layer": 23,
+  "alpha": 0.1,
+  "hidden_dimension": 896,
+  "vector_file": "artifacts/real/refusal_vector.npy",
+  "vector_norm": 292.880554,
+  "residual_norm_at_layer": 292.8805,
+  "alpha_semantics": "alpha * (typical residual norm at the steering layer) added to the residual stream",
+  "hook_point": "decoder_layer_output_residual"
+}

@@ -1,0 +1,21 @@
+# ==============================================================================
+# Inference-Time Activation Steering Configuration (SafeTune RefusalDirection)
+# ==============================================================================
+
+model_id: "CohereLabs/tiny-aya-global"
+fallback_model_id: "DhruvParmar051/tiny-aya-global-oneshot-repair"
+
+refusal_direction:
+  method: "activation_difference"
+  calibration_dataset: "data/safety_train_pairs.jsonl"
+  num_pairs: 64
+  target_layers: [16, 17, 18, 19, 20, 21, 22, 23, 24]
+  normalize: true
+  hook_point: "residual_post"
+
+alpha: 0.35
+
+runtime:
+  enable_steering: true
+  temperature: 0.0
+  max_new_tokens: 256

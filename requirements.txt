@@ -1,0 +1,12 @@
+# Core (CPU-only is enough - the whole pipeline runs on a 4-core laptop)
+torch>=2.2
+transformers>=4.40
+numpy>=1.26
+safetensors>=0.4
+
+# Figures + tests
+matplotlib>=3.8
+pytest>=8.0
+
+# Optional: run the same pipeline on a GPU model
+# pip install torch --index-url https://download.pytorch.org/whl/cu121

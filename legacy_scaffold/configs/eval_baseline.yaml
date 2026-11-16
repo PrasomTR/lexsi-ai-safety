@@ -1,0 +1,44 @@
+# ==============================================================================
+# Baseline Red-Teaming Evaluation Configuration (AuditKIT)
+# ==============================================================================
+
+model_id: "CohereLabs/tiny-aya-global"
+fallback_model_id: "DhruvParmar051/tiny-aya-global-oneshot-repair"
+
+model_loader:
+  device: "cuda"
+  torch_dtype: "bfloat16"
+  load_in_4bit: true
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_compute_dtype: "bfloat16"
+  bnb_4bit_use_double_quant: true
+  trust_remote_code: false
+
+data:
+  benchmark_path: "data/redteam_benchmark.jsonl"
+  benign_path: "data/benign_retention.jsonl"
+
+probes:
+  - jailbreak
+  - prompt_injection
+  - encoding
+  - refusal
+  - advbench_core
+
+metrics:
+  - asr
+  - refusal_rate
+  - orr
+  - defcon_grade
+
+generation:
+  max_new_tokens: 256
+  temperature: 0.0
+  do_sample: false
+  top_p: 1.0
+
+output:
+  output_dir: "artifacts/baseline_eval"
+  results_file: "artifacts/baseline_eval/results.json"
+  fingerprint_file: "artifacts/baseline_eval/run_fingerprint.txt"
+  generate_fingerprint: true
